@@ -1,0 +1,22 @@
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><%= link_to "Home", instagramms_path %></a>
+       </li>
+       <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to "Feed", new_feed_path %></a>
+       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to "Instagram Post", new_instagramm_path %></a>
+      </li>    
+   </ul>
+  </div> 
+
+
+
+<h1><%= @user.name %>page's</h1>
+
+<p>email address: <%= @user.email %></p>
+
+
+<%= link_to 'Instagramm Post', instagramms_path, class: 'btn btn-default' %>

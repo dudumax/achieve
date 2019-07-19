@@ -1,0 +1,2 @@
+module InstagrammsHelper
+end

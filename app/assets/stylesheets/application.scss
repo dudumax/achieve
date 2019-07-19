@@ -1,0 +1,50 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+body {
+  text-align: center;
+  background-color: powderblue;
+}
+
+
+li{
+    list-style: circle;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.navbar-toggle
+{
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+@media (min-width: 768px){
+.navbar-collapse.collapse {
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+}
+
+.navbar-brand {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+
+.navbar-item {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}

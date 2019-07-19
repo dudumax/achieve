@@ -1,0 +1,29 @@
+<%= form_with(model: feed, url: choose_edit_or_feeds,local: true) do |form| %>
+  <% if feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(feed.errors.count, "error") %> prohibited this feed from being saved:</h2>
+
+      <ul>
+      <% feed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
+    <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
+    <% if form.object.image? %>
+      <%= image_tag form.object.image.thumb.url %>
+      <%= form.label :remove_image %>
+      <%= form.check_box :remove_image %> 
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

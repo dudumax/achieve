@@ -1,0 +1,19 @@
+<h3>Send it with the following contents.</h3>
+
+<%= form_with(model: @insatgramm, url: instagramms_path, local: true) do |form| %>
+  <%= form.hidden_field :insta %>
+  <p> Body: <%= @instagramm.insta %> </p>
+<li><%= form.submit  "Submit" %></li> 
+  
+<% end %>
+  
+  
+<%= form_with(model: @instagramm, url: new_instagramm_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :insta %>
+  
+  
+  
+  <li><%= form.submit "back", name: 'back' %></li>
+  
+
+<% end %>

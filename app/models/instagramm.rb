@@ -1,0 +1,2 @@
+class Instagramm < ApplicationRecord
+end

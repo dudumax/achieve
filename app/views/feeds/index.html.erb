@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Feeds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  
+    <% @feeds.each do |feed| %>
+      
+      <h1><%= feed.image %></h1>
+      <p><%= link_to 'Show', feed %>
+        <%= link_to 'Edit', edit_feed_path(feed) %>
+        <%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+    
+<hr />
+
+<br>
+
+<p><%= link_to 'New Feed', new_feed_path %>
+<%= link_to 'Instagramm Home Post',instagramms_path, class: 'btn btn-default' %>
+</p>
